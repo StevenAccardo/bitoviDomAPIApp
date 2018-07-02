@@ -1,7 +1,7 @@
 import '../node_modules/bootstrap/scss/bootstrap.scss';
 import teamData from './helpers/teamData';
 import devData from './helpers/devData';
-import { CreateElement, buildSearch, buildProfile, animate } from './helpers';
+import { CreateElement, BuildSearch, buildProfile, animate } from './helpers';
 import hairImg from '../assets/images/hair.png';
 import tortImg from '../assets/images/tort.png';
 import launchImg from '../assets/images/launch.png';
@@ -35,7 +35,7 @@ new CreateElement('.team', 'input', [{ class: 'team__input' }]);
 const teamInput = document.querySelector('.team__input');
 teamInput.style.width = '75%';
 teamInput.style.margin = '2rem 0';
-buildSearch('.team__input', 'Search Team Members...', teamData);
+new BuildSearch('.team__input', 'Search Team Members...', teamData);
 new CreateElement('.team', 'div', [{ class: 'team__profile' }]);
 buildProfile('.team__input', '.team__profile', teamData);
 
@@ -46,6 +46,6 @@ new CreateElement('.team', 'input', [{ class: 'team__input2' }]);
 const teamInput2 = document.querySelector('.team__input2');
 teamInput2.style.width = '75%';
 teamInput2.style.margin = '2rem 0';
-buildSearch('.team__input2', 'Search Team Members...', devData);
+new BuildSearch('.team__input2', 'Search Team Members...', devData);
 new CreateElement('.team', 'div', [{ class: 'team__profile2' }]);
 buildProfile('.team__input2', '.team__profile2', devData);
